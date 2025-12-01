@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instituto Maria Noêmia – Pesquisa, Preservação e Educação</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Instituto Maria Noêmia – Pesquisa, preservação do Cerrado, galinhas caipiras, cultura caipira e educação ambiental em Orizona – GO."
+  />
+
+  <!-- FAVICON / LOGO -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://i.ibb.co/HL7wM1yX/Chat-GPT-Image-30-de-nov-de-2025-23-11-00.png"  <!-- troque pelo seu favicon -->
+        
+
+  <style>
+    :root {
+      --green: #14532d;
+      --green-soft: #166534;
+      --green-dark: #052e16;
+      --gold: #d4af37;
+      --bg: #f9fafb;
+      --text: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.15);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --transition: 0.2s ease-in-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-inline-size: 100%;
+      display: block;
+    }
+
+    .page {
+      min-block-size: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top left, #e5f3eb 0, #f9fafb 50%);
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(249, 250, 251, 0.85);
+      border-block-end: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-container {
+      max-inline-size: 1120px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .logo-wrap {
+  inline-size: 60px;    /* um pouco maior para ficar mais elegante */
+  block-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrap img {
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand-text span:last-child {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-end: -0.25rem;
+      inline-size: 0;
+      block-size: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--green-soft));
+      border-radius: 999px;
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      inline-size: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(148, 163, 184, 0.7);
+      color: #111827;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--green-soft);
+      background: #f1f5f9;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green-soft), var(--green-dark));
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(22, 101, 52, 0.45);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.07);
+      transform: translateY(-1px);
+    }
+
+    .mobile-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    @media (max-inline-size: 840px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+        color: var(--green-dark);
+      }
+    }
+
+    /* HERO */
+
+    .hero {
+      max-inline-size: 1120px;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 3.25rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    @media (max-inline-size: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-block-start: 2rem;
+      }
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--green-soft);
+      font-weight: 700;
+      margin-block-end: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
+      line-height: 1.1;
+      color: var(--green-dark);
+      margin-block-end: 0.85rem;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-inline-size: 32rem;
+      margin-block-end: 1.6rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-block-end: 1.75rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(255, 255, 255, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #4b5563;
+    }
+
+    .badge-dot {
+      inline-size: 8px;
+      block-size: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fef9c3, #eab308);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #fefce8 0, #ecfccb 35%, #f9fafb 80%);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.4rem 1.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #a3a3a3;
+      margin-block-end: 0.9rem;
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-block-end: 0.3rem;
+    }
+
+    .hero-card-sub {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-block-end: 1rem;
+    }
+
+    .hero-tag-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-tag {
+      padding: 0.45rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #4b5563;
+    }
+
+    .hero-tag span.icon {
+      inline-size: 16px;
+      block-size: 16px;
+      border-radius: 999px;
+      background: rgba(22, 101, 52, 0.09);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--green-soft);
+    }
+
+    .hero-stamp {
+      position: absolute;
+      inset-inline-end: -14px;
+      inset-block-end: -14px;
+      inline-size: 120px;
+      block-size: 120px;
+      border-radius: 999px;
+      border: 1px dashed rgba(22, 101, 52, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 20%, rgba(234, 179, 8, 0.05), transparent 60%);
+    }
+
+    .hero-stamp-inner {
+      inline-size: 82px;
+      block-size: 82px;
+      border-radius: 999px;
+      background: var(--green-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fef9c3;
+      font-size: 0.7rem;
+      text-align: center;
+      gap: 0.15rem;
+    }
+
+    .hero-stamp-inner strong {
+      font-size: 1rem;
+    }
+
+    /* SECTIONS GENERIC */
+
+    section {
+      padding: 2.5rem 1.25rem 2.75rem;
+    }
+
+    .section-inner {
+      max-inline-size: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-block-end: 1.5rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--green-soft);
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-inline-size: 40rem;
+    }
+
+    /* SOBRE */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-inline-size: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .about-card h3 {
+      font-size: 1.1rem;
+      margin-block-end: 0.5rem;
+      color: var(--green-dark);
+    }
+
+    .about-card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-block-end: 0.75rem;
+    }
+
+    .about-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .about-list li {
+      display: flex;
+      gap: 0.4rem;
+      margin-block-end: 0.4rem;
+    }
+
+    .about-list li::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block-start: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    /* ÁREAS */
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.35rem;
+    }
+
+    @media (max-inline-size: 1024px) {
+      .areas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-inline-size: 720px) {
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .area-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.1rem 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .area-icon {
+      inline-size: 32px;
+      block-size: 32px;
+      border-radius: 999px;
+      background: rgba(22, 101, 52, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--green-soft);
+      margin-block-end: 0.25rem;
+    }
+
+    .area-card h3 {
+      font-size: 1rem;
+      color: var(--green-dark);
+      margin-block-end: 0.1rem;
+    }
+
+    .area-card p {
+      font-size: 0.88rem;
+      color: #4b5563;
+    }
+
+    .area-chip-row {
+      margin-block-start: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+    }
+
+    .area-chip {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #4b5563;
+      background: #f9fafb;
+    }
+
+    /* COMO APOIAR */
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    @media (max-inline-size: 900px) {
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .support-steps {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .support-step {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .support-step-badge {
+      inline-size: 24px;
+      block-size: 24px;
+      border-radius: 999px;
+      background: rgba(22, 101, 52, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--green-soft);
+      flex-shrink: 0;
+    }
+
+    .support-step h3 {
+      font-size: 0.98rem;
+      color: var(--green-dark);
+      margin-block-end: 0.1rem;
+    }
+
+    .support-step p {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .support-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1.35rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .support-card strong {
+      color: var(--green-dark);
+    }
+
+    /* CONTATO */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-inline-size: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    form {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem 1rem;
+    }
+
+    @media (max-inline-size: 640px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.86rem;
+      color: #374151;
+    }
+
+    .form-field-full {
+      grid-column: 1 / -1;
+    }
+
+    label span {
+      color: #ef4444;
+    }
+
+    input,
+    textarea {
+      border-radius: 0.7rem;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--green-soft);
+      box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.15);
+    }
+
+    textarea {
+      resize: vertical;
+      min-block-size: 110px;
+    }
+
+    .form-footer {
+      margin-block-start: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .contact-info-card {
+      font-size: 0.9rem;
+      color: #4b5563;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .contact-dot {
+      inline-size: 10px;
+      block-size: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      margin-block-start: 0.3rem;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--green-dark);
+      color: #e5e7eb;
+      padding: 1.75rem 1.25rem 1.1rem;
+      margin-block-start: 2rem;
+    }
+
+    .footer-inner {
+      max-inline-size: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-inline-size: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .footer-brand span {
+      color: #9ca3af;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    @media (max-inline-size: 640px) {
+      .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .footer-col-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-block-end: 0.35rem;
+      color: #e5e7eb;
+    }
+
+    .footer-link {
+      display: block;
+      color: #9ca3af;
+      margin-block-end: 0.2rem;
+    }
+
+    .footer-bottom {
+      max-inline-size: 1120px;
+      margin: 1rem auto 0;
+      padding-block-start: 0.75rem;
+      border-block-start: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.78rem;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <header>
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="logo-wrap">
+    <img src="https://i.ibb.co/HL7wM1yX/Chat-GPT-Image-30-de-nov-de-2025-23-11-00.png" 
+         alt="Instituto Maria Noêmia – Logo oficial" />
+</div>
+
+                    <div class="brand-text">
+                        <span>INSTITUTO</span>
+                        <span>MARIA NOÊMIA</span>
+                    </div>
+                </div>
+
+                <nav class="nav-links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#areas">Áreas de atuação</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#conteudos">Conteúdos</a>
+                    <a href="#como-apoiar">Como apoiar</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a href="#transparencia" class="btn btn-outline">Transparência</a>
+                    <a href="#como-apoiar" class="btn btn-primary">Quero apoiar</a>
+                </div>
+
+                <button class="mobile-toggle" aria-label="Menu">
+                    ☰
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <main>
+            <section class="hero" id="topo">
+                <div>
+                    <div class="hero-label">Pesquisa • Preservação • Educação</div>
+                    <h1 class="hero-title">
+                        Cuidando do <span>Cerrado</span>, da
+                        <span>cultura caipira</span> e das futuras gerações.
+                    </h1>
+                    <p class="hero-sub">
+                        O Instituto Maria Noêmia nasce em Orizona (GO) para preservar o
+                        Cerrado, proteger galinhas caipiras, valorizar a cultura local e
+                        formar crianças, jovens e comunidades através da educação ambiental.
+                    </p>
+
+                    <div class="hero-badges">
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            Preservação de plantas nativas do Cerrado
+                        </div>
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            Galinhas caipiras & cultura caipira
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#como-apoiar" class="btn btn-primary">
+                            Quero apoiar o Instituto →
+                        </a>
+                        <a href="#sobre" class="btn btn-outline">
+                            Conhecer nossa história
+                        </a>
+                        <span class="hero-note">
+                            Mantido por GP Holding Participações e parceiros locais.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="hero-card">
+                        <div class="hero-pill">Instituto Maria Noêmia</div>
+                        <div class="hero-card-title">
+                            Um instituto nascido da roça e para a roça.
+                        </div>
+                        <div class="hero-card-sub">
+                            Honrando o legado de Maria Noêmia: simplicidade, trabalho e amor
+                            à terra.
+                        </div>
+
+                        <div class="hero-tag-grid">
+                            <div class="hero-tag">
+                                <span class="icon">🌱</span>
+                                Banco de sementes do Cerrado
+                            </div>
+                            <div class="hero-tag">
+                                <span class="icon">🐔</span>
+                                Linhagens de galinhas caipiras
+                            </div>
+                            <div class="hero-tag">
+                                <span class="icon">🎓</span>
+                                Programas com escolas e jovens
+                            </div>
+                            <div class="hero-tag">
+                                <span class="icon">🎶</span>
+                                Cultura caipira e saberes locais
+                            </div>
+                        </div>
+
+                        <div class="hero-stamp">
+                            <div class="hero-stamp-inner">
+                                <span>Desde</span>
+                                <strong>2025</strong>
+                                <span>Orizona – Goiás</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOBRE -->
+            <section id="sobre">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-label">Sobre o Instituto</div>
+                        <h2 class="section-title">Quem foi Maria Noêmia e por que existimos</h2>
+                        <p class="section-sub">
+                            O Instituto é uma homenagem à história de Maria Noêmia, mulher
+                            simples, batalhadora e comunicadora, que ensinou a plantar, a
+                            cuidar do terreiro e a respeitar o Cerrado. Transformamos esse
+                            legado em pesquisa, preservação e educação.
+                        </p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <h3>Missão, visão e valores</h3>
+                            <p>
+                                Promover a preservação do Cerrado, fortalecer a cultura caipira
+                                e desenvolver educação ambiental e agrícola, com impacto real
+                                nas comunidades.
+                            </p>
+
+                            <ul class="about-list">
+                                <li>Preservar espécies nativas de plantas do Cerrado.</li>
+                                <li>Proteger e valorizar galinhas caipiras e criadores locais.</li>
+                                <li>Manter viva a cultura caipira: receitas, histórias, música e tradições.</li>
+                                <li>Desenvolver pesquisas aplicadas e acessíveis ao produtor.</li>
+                                <li>Educar crianças, jovens e famílias para o cuidado com a terra.</li>
+                            </ul>
+
+                            <div class="pill-grid">
+                                <span class="pill">Sustentabilidade</span>
+                                <span class="pill">Tradição</span>
+                                <span class="pill">Educação</span>
+                                <span class="pill">Transparência</span>
+                                <span class="pill">Inovação com propósito</span>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>Modelo institucional</h3>
+                            <p>
+                                Somos uma associação sem fins lucrativos mantida pela
+                                <strong>GP Holding Participações</strong> e por parceiros locais,
+                                atuando em rede com escolas, universidades, produtores rurais e
+                                comunidades.
+                            </p>
+                            <p>
+                                Todos os recursos captados são integralmente reinvestidos em
+                                projetos de preservação, pesquisa, educação e cultura.
+                            </p>
+                            <p>
+                                A governança do Instituto é composta por Diretoria, Conselho e
+                                parceiros técnicos, garantindo gestão séria e transparente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ÁREAS DE ATUAÇÃO -->
+            <section id="areas">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-label">Áreas de atuação</div>
+                        <h2 class="section-title">Onde o Instituto Maria Noêmia atua</h2>
+                        <p class="section-sub">
+                            Trabalhamos de forma integrada: natureza, animais, pessoas e
+                            cultura. Cada área conversa com as outras para gerar impacto
+                            contínuo no território.
+                        </p>
+                    </div>
+
+                    <div class="areas-grid">
+                        <div class="area-card">
+                            <div class="area-icon">🌳</div>
+                            <h3>Preservação do Cerrado</h3>
+                            <p>
+                                Viveiro de espécies nativas, banco de sementes, áreas de
+                                reflorestamento e apoio a propriedades rurais para recuperar
+                                matas e veredas.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Viveiro nativo</span>
+                                <span class="area-chip">Banco de sementes</span>
+                            </div>
+                        </div>
+
+                        <div class="area-card">
+                            <div class="area-icon">🐔</div>
+                            <h3>Galinhas caipiras</h3>
+                            <p>
+                                Preservação de linhagens tradicionais, melhoramento genético
+                                responsável e apoio a pequenos criadores com matrizes, manejo e
+                                formação.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Linhagens caipiras</span>
+                                <span class="area-chip">Formação de criadores</span>
+                            </div>
+                        </div>
+
+                        <div class="area-card">
+                            <div class="area-icon">🔬</div>
+                            <h3>Pesquisa aplicada</h3>
+                            <p>
+                                Laboratório de Experimentação Rural (L.E.R.) com estudos em
+                                biodiversidade, nutrição, genética e manejo sustentável, em
+                                parceria com universidades.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Parcerias acadêmicas</span>
+                                <span class="area-chip">Pesquisas de campo</span>
+                            </div>
+                        </div>
+
+                        <div class="area-card">
+                            <div class="area-icon">🎓</div>
+                            <h3>Educação ambiental</h3>
+                            <p>
+                                Programas escolares, trilhas ecológicas, oficinas de plantio,
+                                hortas, compostagem e criação responsável de aves e pequenos
+                                animais.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Trilhas educativas</span>
+                                <span class="area-chip">Hortas escolares</span>
+                            </div>
+                        </div>
+
+                        <div class="area-card">
+                            <div class="area-icon">🎶</div>
+                            <h3>Cultura caipira</h3>
+                            <p>
+                                Projeto Raízes Caipiras: registro de histórias, receitas, causos,
+                                música, festas e saberes populares do interior goiano.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Saberes locais</span>
+                                <span class="area-chip">Culinária e memória</span>
+                            </div>
+                        </div>
+
+                        <div class="area-card">
+                            <div class="area-icon">🤝</div>
+                            <h3>Articulação territorial</h3>
+                            <p>
+                                Construção de redes com escolas, produtores, prefeituras e
+                                empresas para fortalecer o desenvolvimento sustentável do
+                                território.
+                            </p>
+                            <div class="area-chip-row">
+                                <span class="area-chip">Parcerias locais</span>
+                                <span class="area-chip">Impacto social</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJETOS -->
+            <section id="projetos">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-label">Projetos</div>
+                        <h2 class="section-title">Iniciativas que já estão saindo do papel</h2>
+                        <p class="section-sub">
+                            O Instituto nasce com um plano de trabalho robusto, mas começa
+                            com passos concretos e pés na terra, em Orizona – GO.
+                        </p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <h3>Projeto 1 – Banco de Sementes Maria Noêmia</h3>
+                            <p>
+                                Coleta, catalogação e multiplicação de sementes de espécies
+                                nativas do Cerrado, com viveiro e áreas demonstrativas em
+                                propriedades parceiras.
+                            </p>
+                            <ul class="about-list">
+                                <li>Coleta de espécies nativas em Orizona e região.</li>
+                                <li>Produção de mudas para restauração ecológica.</li>
+                                <li>Parcerias com escolas para plantios coletivos.</li>
+                            </ul>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>Projeto 2 – Raças Caipiras do Cerrado</h3>
+                            <p>
+                                Preservação de linhagens de galinhas caipiras, com foco em
+                                genética, sanidade, alimentação e fortalecimento de pequenos
+                                criadores.
+                            </p>
+                            <ul class="about-list">
+                                <li>Identificação e registro de linhagens locais.</li>
+                                <li>Distribuição de matrizes para famílias rurais.</li>
+                                <li>Oficinas de manejo e bem-estar animal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTEÚDOS -->
+            <section id="conteudos">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-label">Conteúdos</div>
+                        <h2 class="section-title">Conhecimento para circular no campo e na cidade</h2>
+                        <p class="section-sub">
+                            Artigos, materiais educativos e histórias para aproximar quem vive
+                            no campo e quem vive na cidade da realidade do Cerrado, da roça e
+                            da cultura caipira.
+                        </p>
+                    </div>
+
+                    <div class="areas-grid">
+                        <div class="area-card">
+                            <div class="area-icon">📘</div>
+                            <h3>Cartilhas e e-books</h3>
+                            <p>Materiais simples, diretos e ilustrados para escolas e famílias.</p>
+                        </div>
+                        <div class="area-card">
+                            <div class
+              <h3>Notícias e relatos</h3>
+              <p>Histórias do dia a dia do Instituto, eventos, mutirões e plantios.</p>
+            </div>
+            <div class="area-card">
+              <div class="area-icon">🎥</div>
+              <h3>Vídeos e trilhas educativas</h3>
+              <p>Visitas guiadas, experiências no campo e atividades com estudantes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO APOIAR -->
+      <section id="como-apoiar">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-label">Como apoiar</div>
+            <h2 class="section-title">Vamos cuidar do Cerrado e da cultura caipira juntos?</h2>
+            <p class="section-sub">
+              Empresas, pessoas físicas, escolas e universidades podem apoiar
+              financeiramente, tecnicamente ou com tempo e conhecimento.
+            </p>
+          </div>
+
+          <div class="support-grid">
+            <div class="support-steps">
+              <div class="support-step">
+                <div class="support-step-badge">1</div>
+                <div>
+                  <h3>Apoio financeiro</h3>
+                  <p>
+                    Doações únicas ou recorrentes para manutenção dos projetos,
+                    estrutura do Instituto, viveiro, banco de sementes e ações
+                    educativas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="support-step">
+                <div class="support-step-badge">2</div>
+                <div>
+                  <h3>Parcerias institucionais</h3>
+                  <p>
+                    Prefeituras, escolas, universidades, empresas e projetos
+                    sociais podem construir convênios, termos de fomento e
+                    parcerias técnicas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="support-step">
+                <div class="support-step-badge">3</div>
+                <div>
+                  <h3>Voluntariado e conhecimento</h3>
+                  <p>
+                    Educadores, pesquisadores, comunicadores e pessoas da
+                    comunidade podem somar com tempo, conhecimento e presença.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="support-card">
+              <p>
+                <strong>Quer apoiar o Instituto Maria Noêmia?</strong><br />
+                Envie uma mensagem pelo formulário de contato ou fale diretamente
+                com nossa equipe para alinhar o melhor formato de parceria.
+              </p>
+              <p style="margin-block-start:0.6rem;">
+                <strong>E-mail institucional:</strong><br />
+                contato@institutomarianoemia.org.br (exemplo – ajuste para o seu domínio)
+              </p>
+              <p style="margin-block-start:0.6rem;">
+                <strong>Mantenedora:</strong><br />
+                GP Holding Participações Ltda – apoio estrutural, técnico e de
+                governança ao Instituto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-label">Contato</div>
+            <h2 class="section-title">Fale com o Instituto Maria Noêmia</h2>
+            <p class="section-sub">
+              Use o formulário para enviar dúvidas, propostas de parceria,
+              convites ou sugestões. Vamos construir juntos.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <form name="contato-instituto" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contato-instituto" />
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="nome">Nome completo <span>*</span></label>
+                  <input id="nome" name="nome" required />
+                </div>
+                <div class="form-field">
+                  <label for="email">E-mail <span>*</span></label>
+                  <input id="email" type="email" name="email" required />
+                </div>
+                <div class="form-field">
+                  <label for="telefone">Telefone / WhatsApp</label>
+                  <input id="telefone" name="telefone" />
+                </div>
+                <div class="form-field">
+                  <label for="assunto">Assunto</label>
+                  <input id="assunto" name="assunto" />
+                </div>
+                <div class="form-field form-field-full">
+                  <label for="mensagem">Mensagem <span>*</span></label>
+                  <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">
+                  Enviar mensagem
+                </button>
+                <span>Responderemos o quanto antes, dentro do horário de atendimento.</span>
+              </div>
+            </form>
+
+            <div class="contact-info-card">
+              <div class="contact-info-item">
+                <div class="contact-dot"></div>
+                <div>
+                  <strong>Localização</strong><br />
+                  Orizona – Goiás, Brasil<br />
+                  (área rural, região de atuação do Instituto)
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-dot"></div>
+                <div>
+                  <strong>Contato institucional</strong><br />
+                  E-mail: contato@institutomarianoemia.org.br (ajuste para o seu domínio)<br />
+                  WhatsApp: (00) 00000-0000
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-dot"></div>
+                <div>
+                  <strong>Redes sociais</strong><br />
+                  Instagram: @institutomarianoemia<br />
+                  YouTube / Facebook: a definir
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRANSPARÊNCIA (ÂNCORA) -->
+      <section id="transparencia">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="section-label">Transparência</div>
+            <h2 class="section-title">Prestação de contas e governança</h2>
+            <p class="section-sub">
+              Aqui você encontrará demonstrações financeiras, relatórios anuais,
+              plano de trabalho, estatuto social e atas relevantes da entidade.
+            </p>
+          </div>
+          <p style="font-size:0.95rem; color:#4b5563;">
+            Em breve esta área trará os primeiros relatórios e documentos do
+            Instituto Maria Noêmia. Enquanto isso, solicitações específicas
+            podem ser feitas pelo nosso canal de contato institucional.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>Instituto Maria Noêmia</strong>
+      <span>Pesquisa, Preservação e Educação no Cerrado goiano.</span>
+      <span>Orizona – Goiás • Brasil</span>
+      <span>Mantido por GP Holding Participações Ltda.</span>
+    </div>
+
+    <div class="footer-columns">
+      <!-- Mapa do site -->
+      <div>
+        <div class="footer-col-title">Mapa do site</div>
+        <a href="#topo" class="footer-link">Início</a>
+        <a href="#sobre" class="footer-link">Sobre o Instituto</a>
+        <a href="#areas" class="footer-link">Áreas de atuação</a>
+        <a href="#projetos" class="footer-link">Projetos</a>
+        <a href="#conteudos" class="footer-link">Conteúdos</a>
+        <a href="#como-apoiar" class="footer-link">Como apoiar</a>
+        <a href="#contato" class="footer-link">Contato</a>
+        <a href="#transparencia" class="footer-link">Transparência</a>
+      </div>
+
+      <!-- Conexões -->
+      <div>
+        <div class="footer-col-title">Conexões</div>
+        <a href="#como-apoiar" class="footer-link">Seja parceiro</a>
+        <a href="#contato" class="footer-link">Fale conosco</a>
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">YouTube</a>
+      </div>
+
+      <!-- Políticas -->
+      <div>
+        <div class="footer-col-title">Políticas</div>
+        <a href="#" class="footer-link">Política de privacidade</a>
+        <a href="#" class="footer-link">Termos de uso</a>
+        <a href="#" class="footer-link">LGPD – Aviso de privacidade</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="ano"></span> Instituto Maria Noêmia. Todos os direitos reservados.</span>
+    <span>Mantido por GP Holding Participações • Criado por GP Labs.</span>
+  </div>
+</footer>
